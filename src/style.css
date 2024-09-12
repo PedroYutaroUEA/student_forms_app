@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: darkslategrey;
+  display: flex;
+  color: aliceblue;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+  justify-content: space-between;
+}
+
+a {
+  color: lightcyan;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid gray;
+  width: 100%;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  gap: 5rem;
+}
+
+main .form-container {
+  display: flex;
+  width: 25rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background-color: darkcyan;
+  padding: 1rem;
+  border-radius: 10px;
+  & > form {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: .5rem;
+    & > label {
+      display: block;
+      margin-top:.5rem;
+      font-weight: bold
+    };
+    & > input,
+    & > button {
+      width: 100%;
+      padding: 0.5rem 0.25rem;
+      border-radius: 5px;
+      border: none;
+      background: white;
+    };
+    & > button {
+      cursor: pointer;
+      margin-top: 1rem
+    };
+    & > select {
+      padding: .5rem;
+      border-radius: 5px;
+      cursor: pointer;
+    };
+    & > .option-container {
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: .5rem;
+    }
+  }
+}
+
+main .people-container {
+  display: flex;
+  padding: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  align-items: center;
+  width: 100%;
+  border: 2px dashed gray;
+  border-radius: 10px;
+  & > .database-container {
+    display: flex;
+    padding: 1rem;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    & > div#database {
+      display: grid;
+      align-items: center;
+      justify-content: center;
+      place-items: center;
+      gap: 1rem;
+      grid-template-columns: repeat(4, 1fr);
+      & > div#void {
+        opacity: 0.7;
+        transform: translate(30vw, 0);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem;
+        border: 1px dashed gray;
+        border-radius: 10px;
+      }
+      & > div#card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.25rem;
+        background-color: lightcyan;
+        color: black;
+        border-radius: 5px;
+        font-weight: bold;
+        border: 2px solid black;
+        width: 10rem;
+        margin-bottom: 1rem;
+        & > p {
+          border-bottom: 1px solid gray;
+          text-align: center;
+          padding: 0.25rem;
+        }
+        & > p:last-child {
+          border: none;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  border-top: 1px solid gray;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  padding: 1rem;
+  font-size: 1rem;
+}

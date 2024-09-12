@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./src/style.css">
+  <link rel="shortcut icon" href="../assets/image_for_portifolio.jpg" type="image/x-icon">
+  <title>Forms app</title>
+</head>
+<body>
+  <header>
+    <h1>Students forms</h1>
+    <h3>Here you can register your students</h3>
+  </header>
+  <main>
+    <section class="form-container">
+      <h3>Create your characher</h3>
+      <form method="POST" id="form" target="_blank">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" minlength="3" placeholder="Eg: Pedrinho" required>
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" min="1" placeholder="Eg: 12" step="1" required>
+
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+          <option value="">Select your gender</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+        
+        <label for="state">state:</label>
+        <select name="state" id="state" required>
+          <option value="">Select your state</option>
+          <option value="amazonas">Amazonas</option>
+          <option value="amapa">Amapá</option>
+          <option value="acre">Acre</option>
+          <option value="rondonia">Rondônia</option>
+          <option value="roraima">Roraima</option>
+        </select>
+
+        <br>
+
+        <label for="Grade">Grade:</label>
+        <div class="option-container">
+          <input type="radio" id="1" name="grade" value="1_grade">
+          <label for="op1">1º grade;</label>
+          <input type="radio" id="1" name="grade" value="2_grade">
+          <label for="op2">2º grade;</label>
+          <input type="radio" id="1" name="grade" value="3_grade">
+          <label for="op3">3º grade;</label>
+        </div>
+        <button type="submit" id="button">
+          Create character
+        </button>
+      </form>
+    </section>
+    <section class="people-container">
+      <h1>Students database</h1>
+      <div class="database-container">
+        <div id="database">
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    Checkout more applications on my <pre><a href="https://github.com/PedroYutaroUEA" target="_blank"> GitHub </a>! </pre>
+    🐺💙
+  </footer>
+</body>
+<script type="module" src="./src/script.mjs"></script>
+</html>
